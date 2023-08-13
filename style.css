@@ -1,0 +1,166 @@
+/*General*/
+:root {
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #A308FC;
+}
+
+* {box-sizing: border-box;}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Container*/
+.container {
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url('img/background1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.header, content, footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+}
+
+.header {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center bold;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo__img {
+    margin-right: .5rem;
+}
+
+.menu-list {
+    margin: 0;
+}
+
+.menu-list__item {
+    display: inline-block;
+    margin: 0 .5rem;
+    font-size: 24px;
+}
+
+.menu-list__item:last-child {
+    margin-right: 0;
+}
+
+.book-appointment {
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    margin-left: 10rem;
+}
+
+/*Contenido*/
+
+.content {
+    max-width: var(--max-width);
+    flex-grow: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.slideButton {
+    position: absolute; 
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;   
+}
+
+.preSlide {
+    left: 3rem;
+}
+
+.nextSlide {
+    right: 3rem;
+}
+
+
+.content__claim {
+    font-size: 44px;
+    color: var(--accent-color);
+    margin: 0;
+    margin-left: 10rem;
+}
+
+.content__subclaim {
+    font-size: 36px;
+    margin: .5rem 0;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+}
+
+.footer-wrapper {
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__widget {
+    font-size: 24px;
+}
+
+.footer__widget__tittle {
+    color: var(--accent-color);
+    margin: 0 0 1rem 0;
+}
+
+.footer__widget__text {
+    margin: 0;
+}
+
+/*Componentes responsive*/
+@media screen and (max-width: 1280px) {
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .menu {
+        margin-top: 1,5rem;
+    }
+    
+    .footer__widget {
+        margin-bottom: 1,5rem;
+    }
+}
